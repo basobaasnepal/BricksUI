@@ -1,0 +1,169 @@
+@font-face {
+  font-family: "GothamSSm-Light";
+  src: url("../../fonts/GothamSSm-Light.eot");
+  src: url("../../fonts/GothamSSm-Light.eot?#iefix") format("embedded-opentype"),
+    url("../../fonts/GothamSSm-Light.otf") format("opentype"),
+    url("../../fonts/GothamSSm-Light.svg") format("svg"),
+    url("../../fonts/GothamSSm-Light.ttf") format("truetype"),
+    url("../../fonts/GothamSSm-Light.woff") format("woff"),
+    url("../../fonts/GothamSSm-Light.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GothamSSm-Book";
+  src: url("../../fonts/GothamSSm-Book.eot");
+  src: url("../../fonts/GothamSSm-Book.eot?#iefix") format("embedded-opentype"),
+    url("../../fonts/GothamSSm-Book.otf") format("opentype"),
+    url("../../fonts/GothamSSm-Book.svg") format("svg"),
+    url("../../fonts/GothamSSm-Book.ttf") format("truetype"),
+    url("../../fonts/GothamSSm-Book.woff") format("woff"),
+    url("../../fonts/GothamSSm-Book.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GothamSSm-Bold";
+  src: url("../../fonts/GothamSSm-Bold.woff") format("woff"),
+    url("../../fonts/GothamSSm-Bold.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: "GothamSSm-Book";
+}
+.page-wrapper {
+  display: grid;
+  grid-template-columns: 20% 75%;
+  grid-column-gap: 1em;
+  width: 100%;
+  .left-sidebar {
+    background-color: #fff;
+    border-right: 1px solid #eaeaea;
+  }
+  .right-sidebar {
+    background-color: #fff;
+    .page-title {
+      font-size: 30px;
+      font-weight: 600;
+      margin: 10px 10px;
+      color: #091e42;
+    }
+    .code-display-area {
+      margin-left: 10px;
+      .code-display-when {
+        .when-title {
+          font-size: 24px;
+        }
+        .when-desc {
+          font-size: 14px;
+          margin-top: 20px;
+          ul,
+          .when-desc-height {
+            line-height: 2;
+          }
+        }
+      }
+      .code-display-example {
+        .code-display-title {
+          margin: 10px 0;
+          font-size: 24px;
+          color: #091e42;
+        }
+        .code-display-example-wrapper {
+          display: grid;
+          grid-template-columns: 50% 50%;
+          grid-column-gap: 1em;
+        }
+      }
+    }
+    .code-api-area {
+      .api-table-wrapper {
+        margin: 10px 15px;
+        .api-table-title {
+          font-size: 24px;
+          margin: 15px 0;
+          font-weight: 500;
+          color: #091e42;
+        }
+        .api-table-desc {
+          font-size: 15px;
+          code {
+            background-color: #f2f4f5;
+            border: 1px solid #f0f0f0;
+            padding: 3px 5px;
+            margin: 0 5px;
+          }
+        }
+        .grid-table {
+          border-left: 1px solid #eaeaea;
+          border-top: 1px solid #eaeaea;
+          border-bottom: 1px solid #eaeaea;
+          margin-top: 20px;
+          .grid-table-header {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr 1fr;
+            .header {
+              color: #5c6b77;
+              font-weight: 500;
+              background: rgba(0, 0, 0, 0.02);
+              padding: 20px 12px;
+              font-size: 14px;
+              text-align: center;
+            }
+          }
+          .grid-table-type {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr 1fr;
+            .prop {
+              color: #595959;
+              font-weight: 500;
+              background-color: #fff;
+              padding: 20px 12px;
+              font-size: 14px;
+              font-weight: 600;
+              border-bottom: 1px solid #eaeaea;
+              text-align: center;
+            }
+            .desc {
+              color: rgba(0, 0, 0, 0.85);
+              font-weight: 500;
+              background-color: #fff;
+              padding: 20px 12px;
+              font-size: 14px;
+              border-bottom: 1px solid #eaeaea;
+              text-align: center;
+              line-height: 2;
+            }
+            .type {
+              color: #c41d7f;
+              font-weight: 500;
+              background-color: #fff;
+              padding: 20px 12px;
+              font-size: 14px;
+              border-bottom: 1px solid #eaeaea;
+              text-align: center;
+            }
+            .defaults {
+              color: #595959;
+              font-weight: 500;
+              background-color: #fff;
+              padding: 20px 12px;
+              font-size: 14px;
+              border-bottom: 1px solid #eaeaea;
+              text-overflow: ellipsis;
+              overflow: hidden;
+              text-align: center;
+              span {
+                background-color: #f2f4f5;
+                padding: 3px 5px;
+                border-color: #f2f4f5;
+                color: #000;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

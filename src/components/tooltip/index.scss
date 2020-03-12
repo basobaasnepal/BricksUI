@@ -1,0 +1,171 @@
+.tool-tip-wrapper {
+  position: relative;
+}
+
+.top,
+.bottom,
+.right,
+.left,
+.rightTop,
+.rightBottom,
+.topRight,
+.topLeft,
+.bottomLeft,
+.bottomRight,
+.leftTop,
+.leftBottom {
+  visibility: hidden;
+  height: 16px;
+  padding: 8px;
+  background-color: #000;
+  color: #fff;
+  position: absolute;
+  font-size: 14px;
+  border-radius: 5px;
+  font-family: GothamSSm-Light;
+  white-space: nowrap;
+  z-index: 999;
+  &::after {
+    visibility: hidden;
+    border: solid;
+    content: "";
+    position: absolute;
+  }
+}
+.top {
+  bottom: 35px;
+  left: 0;
+  &::after {
+    border-color: black transparent transparent transparent;
+    border-width: 5px 5px 0 5px;
+    top: 31px;
+    left: 50%;
+  }
+}
+.topLeft {
+  bottom: 35px;
+  left: 0;
+  &::after {
+    border-color: black transparent transparent transparent;
+    border-width: 5px 5px 0 5px;
+    bottom: -5px;
+    left: 15%;
+  }
+}
+.topRight {
+  bottom: 35px;
+  right: 0;
+  &::after {
+    border-color: black transparent transparent transparent;
+    border-width: 5px 5px 0 5px;
+    bottom: -5px;
+    left: 75%;
+  }
+}
+.bottom {
+  top: 35px;
+  left: 0;
+  &::after {
+    border-color: transparent transparent black transparent;
+    border-width: 0 5px 5px 5px;
+    top: -5px;
+    left: 50%;
+  }
+}
+.bottomLeft {
+  top: 35px;
+  left: 0;
+  &::after {
+    border-color: transparent transparent black transparent;
+    border-width: 0 5px 5px 5px;
+    top: -5px;
+    left: 15%;
+  }
+}
+.bottomRight {
+  top: 35px;
+  right: 0;
+  &::after {
+    border-color: transparent transparent black transparent;
+    border-width: 0 5px 5px 5px;
+    top: -5px;
+    left: 75%;
+  }
+}
+.left {
+  right: 110%;
+  top: -5px;
+  &::after {
+    border-color: transparent transparent transparent black;
+    border-width: 5px 0 5px 5px;
+    top: 10px;
+    right: -4px;
+  }
+}
+.leftTop {
+  right: 110%;
+  top: 0;
+  &::after {
+    border-color: transparent transparent transparent black;
+    border-width: 5px 0 5px 5px;
+    top: 4px;
+    right: -4px;
+  }
+}
+.leftBottom {
+  right: 110%;
+  bottom: 0;
+  &::after {
+    border-color: transparent transparent transparent black;
+    border-width: 5px 0 5px 5px;
+    bottom: 4px;
+    right: -4px;
+  }
+}
+.right {
+  left: 110%;
+  top: -5px;
+  &::after {
+    border-color: transparent black transparent transparent;
+    border-width: 5px 5px 5px 0;
+    top: 10px;
+    left: -4px;
+  }
+}
+.rightTop {
+  left: 110%;
+  top: 0;
+  &::after {
+    border-color: transparent black transparent transparent;
+    border-width: 5px 5px 5px 0;
+    top: 2px;
+    left: -4px;
+  }
+}
+.rightBottom {
+  left: 110%;
+  bottom: 0;
+  &::after {
+    border-color: transparent black transparent transparent;
+    border-width: 5px 5px 5px 0;
+    top: 15px;
+    left: -4px;
+  }
+}
+.tool-tip-wrapper:hover .top,
+.tool-tip-wrapper:hover .bottom,
+.tool-tip-wrapper:hover .left,
+.tool-tip-wrapper:hover .right,
+.tool-tip-wrapper:hover .rightBottom,
+.tool-tip-wrapper:hover .rightTop,
+.tool-tip-wrapper:hover .leftTop,
+.tool-tip-wrapper:hover .leftBottom,
+.tool-tip-wrapper:hover .topRight,
+.tool-tip-wrapper:hover .topLeft,
+.tool-tip-wrapper:hover .bottomLeft,
+.tool-tip-wrapper:hover .bottomRight {
+  visibility: visible;
+  &::after {
+    visibility: visible;
+  }
+}

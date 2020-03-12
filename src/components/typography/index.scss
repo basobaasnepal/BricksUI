@@ -1,0 +1,209 @@
+$color-subtle-text: #7A869A;
+
+// Headline 1
+$font-size-h1: 52px;
+$font-weight-h1: 500;
+$line-height-h1: 60px;
+$margin-h1: 0 0 24px 0;
+
+// Headline 2
+$font-size-h2: 36px;
+$font-weight-h2: 500;
+$line-height-h2: 60px;
+$margin-h2: 0 0 24px 0;
+
+// Headline 3
+$font-size-h3: 24px;
+$font-weight-h3: 500;
+$line-height-h3: 60px;
+$margin-h3: 0 0 24px 0;
+$letter-spacing-h3: 0.3px;
+
+// Headline 4
+$font-size-h4: 20px;
+$font-weight-h4: 500;
+$line-height-h4: 60px;
+$margin-h4: 0 0 24px 0;
+$letter-spacing-h4: 0.3px;
+
+// Headline 5
+$font-size-h5: 14px;
+$font-weight-h5: 0;
+$line-height-h5: 60px;
+$margin-h5: 0 0 24px 0;
+$text-transform-h5: uppercase;
+$letter-spacing-h5: 1px;
+
+// Headline 6
+$font-size-h6: 12px;
+$font-weight-h6: 500;
+$line-height-h6: 60px;
+$margin-h6: 0 0 24px 0;
+$text-transform-h6: uppercase;
+$letter-spacing-h6: 1px;
+
+//Paragraph
+$font-weight-text: normal;
+$font-size-text: 16px;
+$line-height-text: 24px;
+$margin-text: 0 0 24px 0;
+
+//Paragraph Oversized
+$font-weight-oversized-text: normal;
+$font-size-oversized-text: 20px;
+$line-height-oversized-text: 28px;
+$letter-spacing-oversized-text: 0.3px;
+$margin-oversized-text: 0 0 24px 0;
+
+//Paragraph Long
+$font-feature-settings-text-long: "ss01";
+$font-weight-text-long: normal;
+$font-size-text-long: 18px;
+$line-height-text-long: 26px;
+$margin-text-long: 0 0 24px 0;
+
+//Paragraph Meta
+$font-weight-text-meta: normal;
+$font-size-text-meta: 14px;
+$line-height-text-meta: 18px;
+$margin-text-meta: 0 0 20px 0;
+
+//Paragraph Code 
+$font-weight-text-code: normal; 
+$font-size-text-code: 16px; 
+$line-height-text-code: 24px; 
+$color-text-code: #EBECF0; 
+$background-color-text-code: #36f; 
+$padding-text-code: 24px 40px 32px 40px;
+
+.center{
+  text-align: center;
+}
+
+.left{
+  text-align: left;
+}
+.right{
+  text-align: right;
+}
+.justify{
+  text-align: justify;
+}
+
+.h1 {
+  font-size: $font-size-h1;
+  font-weight: $font-weight-h1;
+  line-height: $line-height-h1;
+  margin-bottom: $margin-h1;
+  color: #091E42;
+}
+
+.h2 {
+  font-size: $font-size-h2;
+  font-weight: $font-weight-h2;
+  line-height: $line-height-h2;
+  margin-bottom: $margin-h2;
+  color: #091E42;
+}
+
+.h3 {
+  font-size: $font-size-h3;
+  font-weight: $font-weight-h3;
+  line-height: $line-height-h3;
+  margin-bottom: $margin-h3;
+  letter-spacing: $letter-spacing-h3;
+  color: #091E42;
+}
+
+.h4 {
+  font-size: $font-size-h4;
+  font-weight: $font-weight-h4;
+  line-height: $line-height-h4;
+  margin-bottom: $margin-h4;
+  letter-spacing: $letter-spacing-h4;
+  color: #091E42;
+}
+
+.h5 {
+  font-size: $font-size-h5;
+  font-weight: $font-weight-h5;
+  line-height: $line-height-h5;
+  margin-bottom: $margin-h5;
+  letter-spacing: $letter-spacing-h5;
+  text-transform: $text-transform-h5;
+  color: #091E42;
+}
+
+.h6 {
+  font-size: $font-size-h6;
+  font-weight: $font-weight-h6;
+  line-height: $line-height-h6;
+  margin-bottom: $margin-h6;
+  letter-spacing: $letter-spacing-h6;
+  text-transform: $text-transform-h6;
+  color: #091E42;
+}
+
+p {
+  font-weight: $font-weight-text;
+  font-size: $font-size-text;
+  line-height: $line-height-text;
+  margin: $margin-text;
+  color: #7A869A;
+  &.oversized {
+    font-weight: $font-size-oversized-text;
+    font-size: $font-size-oversized-text;
+    line-height: $line-height-oversized-text;
+    letter-spacing: $letter-spacing-oversized-text;
+    margin: $margin-oversized-text;
+  }
+
+  &.long {
+    font-feature-settings: $font-feature-settings-text-long;
+    font-weight: $font-weight-text-long;
+    font-size: $font-size-text-long;
+    line-height: $line-height-text-long;
+    margin: $margin-text-long;
+  }
+  &.meta {
+    font-weight: $font-weight-text-meta;
+    font-size: $font-size-text-meta;
+    line-height: $line-height-text-meta;
+    margin: $margin-text-meta;
+  }
+  &.code{
+    font-weight: $font-weight-text-code; 
+    font-size: $font-size-text-code; 
+    line-height: $line-height-text-code; 
+    color: $color-text-code; 
+    background-color: $background-color-text-code; 
+    padding: $padding-text-code;
+    
+  }
+
+  &.subtle{
+    color: $color-subtle-text;
+    display: inline-block;
+  }
+}
+
+.bold {
+  font-weight: 900;
+  display: inline-block;
+}
+
+em {
+  font-style: italic;
+}
+
+a {
+  color: #003399;
+  font-weight: 500;
+  &:hover{
+    color: #003399;
+  }
+}
+
+ul{
+  line-height: 20px;
+}

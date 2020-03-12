@@ -1,0 +1,80 @@
+.single-example-unit {
+  margin: 15px 0px;
+  border: 1px solid #eaeaea;
+  font-family: "GothamSSm-Light";
+  .display-example {
+    padding: 15px;
+    font-size: 14px;
+    .align {
+      text-align: center;
+      margin-right: 0px;
+      margin-bottom: 12px;
+    }
+    .example-large {
+      margin: 15px 0;
+      .side-icon {
+        color: #1890ff;
+        cursor: pointer;
+        &:after {
+          content: "\003E";
+          left: 110%;
+          top: 0;
+          position: absolute;
+          transform: rotate(90deg);
+        }
+      }
+    }
+  }
+  .extra-margin {
+    padding: 40px 20px;
+  }
+  .display-desc {
+    padding-left: 15px;
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    line-height: 2;
+    border-top: 1px solid #eaeaea;
+
+    .display-desc-title {
+      font-size: 14px;
+      color: rgba(0, 0, 0, 0.85);
+      background: #fff;
+      font-weight: 500;
+      position: absolute;
+      top: -15px;
+      z-index: 2;
+    }
+    .desc-wrapper {
+      font-size: 14px;
+    }
+  }
+  .source {
+    border-top: 1px dashed #eaeaea;
+    text-align: center;
+    padding: 5px 0px;
+
+    span {
+      cursor: pointer;
+      &:hover {
+        color: blueviolet;
+      }
+    }
+  }
+  .source-code {
+    border-top: 1px dashed #eaeaea;
+    padding: 15px;
+  }
+}
+code {
+  margin: 0 1px;
+  padding: 0.2em 0.4em;
+  font-size: 0.9em;
+  background: #f2f4f5;
+  border: 1px solid #f0f0f0;
+  border-radius: 3px;
+}
+
+.space {
+  margin-bottom: 12px;
+}

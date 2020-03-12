@@ -1,0 +1,28 @@
+.header {
+  border-bottom: 1px solid #e8e7e3;
+  padding: 3px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  .logo {
+    color: #006bff;
+    font-weight: 900;
+    font-size: 30px;
+    padding: 5px;
+  }
+  .nav {
+    display: flex;
+    padding-left: 5px;
+    padding-right: 20px;
+    justify-content: space-between;
+    line-height: 40px;
+    .nav-item {
+      color: #7a869a;
+      border-bottom: 3px solid white;
+      &:hover {
+        cursor: pointer;
+        color: #006bff;
+        border-bottom: 3px solid #006bff;
+      }
+    }
+  }
+}

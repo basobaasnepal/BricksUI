@@ -1,0 +1,25 @@
+body{
+    margin:0;
+    padding:0;
+}
+.page-wrapper {
+    display: grid;
+    grid-template-columns: 20% 75%;
+    grid-column-gap: 1em;
+    width: 100%;
+    .left-sidebar {
+        margin:0;
+        padding:0;
+      background-color: #fff;
+      border-right: 1px solid #eaeaea;
+    }
+    .right-sidebar {
+      background-color: #fff;
+      .page-title {
+        font-size: 30px;
+        font-weight: 600;
+        margin: 10px 10px;
+        color: #091e42;
+      }
+    }
+}
