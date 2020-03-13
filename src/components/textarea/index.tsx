@@ -1,16 +1,18 @@
 import React from "react";
 import "../input/index.scss";
+import { TextAreaProps } from "../../Interfaces";
 
-const Textarea = () => {
+const TextArea = (props: TextAreaProps) => {
   return (
     <div className="input-wrapper">
       <textarea
-        rows={4}
-        className="text-area"
-        placeholder="input your text here."
+        rows={props.row}
+        className={`${props.className} text-area`}
+        placeholder={props.placeholder}
+        cols={props.cols}
       ></textarea>
     </div>
   );
 };
 
-export default Textarea;
+export default TextArea;

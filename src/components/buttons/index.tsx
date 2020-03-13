@@ -14,6 +14,7 @@ export const Button = (props: ButtonProps) => {
         }btn ${props.disabled ? " disabled" : ""} ${
           props.block ? " block" : ""
         }`}
+        style={props.style}
       >
         {props.children}
       </a>
@@ -29,6 +30,7 @@ export const Button = (props: ButtonProps) => {
         props.block ? " block" : ""
       }`}
       onClick={props.onClick}
+      style={props.style}
     >
       {props.children}
     </button>

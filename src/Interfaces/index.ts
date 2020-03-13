@@ -10,6 +10,7 @@ export interface ButtonProps {
   href?: string;
   disabled?: boolean;
   block?: boolean;
+  style?: React.CSSProperties;
 }
 export interface TooltipProps {
   children: React.ReactNode;
@@ -87,14 +88,41 @@ export interface InputProps {
   prefix?: React.ReactNode;
   size?: "small" | "default" | "large";
   type?: "text" | "password" | "email" | "number";
-  onChange?: (event: React.MouseEvent<HTMLElement, MouseEvent>) => void;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
   disabled?: boolean;
   suffix?: React.ReactNode;
   postTab?: React.ReactNode;
   preTab?: React.ReactNode;
+  placeholder?: string;
+  value?: string | number | string[];
+  id?: string;
+  visibilityToggle?: boolean;
+  name?: string;
+  defaultValue?: string;
+  minLength?: number;
+  maxLength?: number;
+  className?: string;
 }
 export interface SearchProps {
   button?: "icon" | "block";
   size?: "small" | "default" | "large";
-  onChange?: (event: React.MouseEvent<HTMLElement, MouseEvent>) => void;
+  onSearch?: (
+    value: string,
+    event?:
+      | React.ChangeEvent<HTMLInputElement>
+      | React.MouseEvent<HTMLElement, MouseEvent>
+      | React.KeyboardEvent<HTMLInputElement>
+  ) => void;
+  placeholder?: string;
+  id?: string;
+  value?: string | number;
+  name?: string;
+  searchBtn?: React.ReactNode;
+}
+
+export interface TextAreaProps {
+  placeholder?: string;
+  row?: number;
+  cols?: number;
+  className?: string;
 }
