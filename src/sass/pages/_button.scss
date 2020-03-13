@@ -85,6 +85,7 @@ body {
           margin: 15px 0;
           font-weight: 500;
           color: #091e42;
+          margin-top: 40px;
         }
         .api-table-desc {
           font-size: 15px;
@@ -115,12 +116,12 @@ body {
           .grid-table-type {
             display: grid;
             grid-template-columns: 1fr 2fr 1fr 1fr;
+            font-size: 12px;
             .prop {
               color: #595959;
               font-weight: 500;
               background-color: #fff;
               padding: 20px 12px;
-              font-size: 14px;
               font-weight: 600;
               border-bottom: 1px solid #eaeaea;
               text-align: center;
@@ -130,26 +131,25 @@ body {
               font-weight: 500;
               background-color: #fff;
               padding: 20px 12px;
-              font-size: 14px;
               border-bottom: 1px solid #eaeaea;
               text-align: center;
               line-height: 2;
+              font-family: "GothamSSm-Light";
             }
             .type {
               color: #c41d7f;
               font-weight: 500;
               background-color: #fff;
               padding: 20px 12px;
-              font-size: 14px;
               border-bottom: 1px solid #eaeaea;
               text-align: center;
+              font-family: "GothamSSm-Light";
             }
             .defaults {
               color: #595959;
               font-weight: 500;
               background-color: #fff;
               padding: 20px 12px;
-              font-size: 14px;
               border-bottom: 1px solid #eaeaea;
               text-overflow: ellipsis;
               overflow: hidden;

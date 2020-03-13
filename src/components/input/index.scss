@@ -1,6 +1,5 @@
 .input-wrapper {
   padding: 10px;
-  width: 50%;
   font-family: "GothamSSm-Light";
   .input-outer-tab {
     padding: 0 10px;
@@ -204,6 +203,17 @@
   }
 }
 .input-small {
+  .input-tab-outer {
+    .bordered {
+      height: 26px;
+    }
+    .input-tab-wrapper-left {
+      height: 26px;
+    }
+    .input-tab-wrapper-right {
+      height: 26px;
+    }
+  }
   .input-outer {
     .bu-input {
       height: 26px;
@@ -221,16 +231,16 @@
     }
   }
 }
-.input-small {
-  .bu-input {
-    height: 26px;
-    font-size: 12px;
-  }
-  .icon-wrapper {
-    height: 16px;
-  }
-}
+
 .input-large {
+  .input-tab-outer {
+    .input-tab-wrapper-left {
+      height: 40px;
+    }
+    .input-tab-wrapper-right {
+      height: 40px;
+    }
+  }
   .input-outer {
     .bu-input {
       height: 40px;
@@ -252,11 +262,5 @@
     .search-input-block {
       width: 80px;
     }
-  }
-}
-.input-large {
-  .bu-input {
-    height: 40px;
-    font-size: 15px;
   }
 }

@@ -16,15 +16,24 @@ const Search = (props: SearchProps) => {
         >
           <div className="input-outer push">
             <input
-              type="text"
+              type="search"
               className="bu-input"
-              placeholder="eg.rijalbinaya2@gmail.com"
+              placeholder={props.placeholder}
+              id={props.id}
+              value={props.value}
+              name={props.name}
             />
             <Button
               type="primary"
               className="search-input-button search-icon-wrapper"
             >
-              <IonIcon icon={search} />
+              {props.searchBtn ? (
+                <>{props.searchBtn}</>
+              ) : (
+                <>
+                  <IonIcon icon={search} />
+                </>
+              )}
             </Button>
           </div>
         </div>
@@ -38,15 +47,20 @@ const Search = (props: SearchProps) => {
         >
           <div className="input-outer push">
             <input
-              type="text"
+              type="search"
               className="bu-input"
-              placeholder="eg.rijalbinaya2@gmail.com"
+              placeholder={props.placeholder}
+              id={props.id}
+              value={props.value}
+              name={props.name}
             />
             <Button
               type="primary"
               className="search-input-block search-icon-wrapper"
             >
-              <span className="search-text">Search</span>
+              <span className="search-text">
+                {props.searchBtn ? <>{props.searchBtn}</> : <>Search</>}
+              </span>
             </Button>
           </div>
         </div>
@@ -60,12 +74,21 @@ const Search = (props: SearchProps) => {
         >
           <div className="input-outer push">
             <input
-              type="text"
+              type="search"
               className="bu-input"
-              placeholder="eg.rijalbinaya2@gmail.com"
+              placeholder={props.placeholder}
+              id={props.id}
+              value={props.value}
+              name={props.name}
             />
-            <Button type="default" className="search-icon-wrapper ">
-              <IonIcon icon={search} className="icon-default" />
+            <Button type="primary" className="search-icon-wrapper">
+              {props.searchBtn ? (
+                <>{props.searchBtn}</>
+              ) : (
+                <>
+                  <IonIcon icon={search} />
+                </>
+              )}
             </Button>
           </div>
         </div>
