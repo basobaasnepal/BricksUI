@@ -87,14 +87,68 @@ export interface InputProps {
   prefix?: React.ReactNode;
   size?: "small" | "default" | "large";
   type?: "text" | "password" | "email" | "number";
-  onChange?: (event: React.MouseEvent<HTMLElement, MouseEvent>) => void;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
   disabled?: boolean;
   suffix?: React.ReactNode;
   postTab?: React.ReactNode;
   preTab?: React.ReactNode;
+  value?: string;
+  placeholder?: string;
+  inputClassName?: string;
 }
 export interface SearchProps {
   button?: "icon" | "block";
   size?: "small" | "default" | "large";
-  onChange?: (event: React.MouseEvent<HTMLElement, MouseEvent>) => void;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+}
+export interface OptionListItems {
+  label: string;
+  value: string;
+}
+export interface SelectProps {
+  children?: React.ReactNode;
+  icon?: React.ReactNode;
+  list?: Array<OptionListItems>;
+  options: Array<OptionListItems>;
+  name?: string;
+  onChange: (event: object) => void;
+  multiple?: boolean;
+  disapper?: boolean;
+  size?: "large" | "small" | "default";
+  placeholder?: string;
+  search?: boolean;
+  selectClassName?: string;
+}
+export interface OptionProps {
+  children?: React.ReactNode;
+  list: Array<OptionListItems>;
+  clickHandler: (value: object) => void;
+  value?: string;
+  disappear?: boolean;
+  optionClassName?: string;
+}
+export interface MultipleSelect {
+  children?: React.ReactNode;
+  list: Array<OptionListItems>;
+  clickHandler: (value: object) => void;
+  value: Array<string>;
+  disappear?: boolean;
+  selectClassName?: string;
+}
+export interface SelectInput {
+  prefix?: React.ReactNode;
+  size?: "small" | "default" | "large";
+  type?: "text" | "password" | "email" | "number";
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  disabled?: boolean;
+  suffix?: React.ReactNode;
+  postTab?: React.ReactNode;
+  preTab?: React.ReactNode;
+  value: Array<string>;
+  displayPlaceholder?: boolean;
+  setDisplayPlaceholder?: (value: boolean) => void;
+  closeHandler: (value: string) => void;
+  placeholder?: string;
+  selectClassName?: string;
+  search?: boolean;
 }

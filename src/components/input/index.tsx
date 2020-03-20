@@ -24,7 +24,9 @@ const Input = (props: InputProps) => {
         <input
           type="text"
           className="bu-input input-disabled"
-          placeholder="eg.rijalbinaya2@gmail.com"
+          placeholder={props.placeholder}
+          value={props.value}
+          onChange={props.onChange}
           disabled
         />
       </div>
@@ -35,11 +37,17 @@ const Input = (props: InputProps) => {
       <div
         className={`input-${props.size ? props.size : "default"} input-wrapper`}
       >
-        <div className="input-outer push">
+        <div
+          className={`${
+            props.inputClassName ? props.inputClassName : ""
+          } input-outer push`}
+        >
           <input
             type={inputType}
             className="bu-input"
-            placeholder="eg.rijalbinaya2@gmail.com"
+            placeholder={props.placeholder}
+            onChange={props.onChange}
+            value={props.value}
           />
           <span className="search-icon-wrapper eye" onClick={inputTypeHandler}>
             <IonIcon icon={iconImage} />
@@ -73,7 +81,9 @@ const Input = (props: InputProps) => {
                 <input
                   type="text"
                   className="bordered"
-                  placeholder="eg.rijalbinaya2@gmail.com"
+                  placeholder={props.placeholder}
+                  onChange={props.onChange}
+                  value={props.value}
                 />
                 <span className="icon-wrapper">{props.suffix}</span>
               </span>
@@ -93,14 +103,20 @@ const Input = (props: InputProps) => {
           </>
         ) : (
           <>
-            <div className="input-outer">
+            <div
+              className={`${
+                props.inputClassName ? props.inputClassName : ""
+              } input-outer`}
+            >
               <span className="icon-wrapper">
                 <span>{props.prefix}</span>
               </span>
               <input
                 type="text"
                 className="bu-input"
-                placeholder="eg.rijalbinaya2@gmail.com"
+                placeholder={props.placeholder}
+                onChange={props.onChange}
+                value={props.value}
               />
               <span className="icon-wrapper">{props.suffix}</span>
             </div>
@@ -108,36 +124,19 @@ const Input = (props: InputProps) => {
         )}
       </div>
     );
-  }
-  if (props.preTab || props.postTab) {
-    return (
-      <div
-        className={`input-${props.size ? props.size : "default"} input-wrapper`}
-      >
-        <div className="input-tab-wrapper">
-          <span className={`${props.preTab ? "input-tab-left" : ""}`}>
-            <span>{props.preTab}</span>
-          </span>
-          <input
-            type="text"
-            className="bu-input"
-            placeholder="eg.rijalbinaya2@gmail.com"
-          />
-          <span className={`${props.postTab ? "input-tab-right" : ""}`}>
-            <span>{props.postTab}</span>
-          </span>
-        </div>
-      </div>
-    );
   } else {
     return (
       <div
-        className={`input-${props.size ? props.size : "default"} input-wrapper`}
+        className={`input-${
+          props.size ? props.size : "default"
+        } input-wrapper multi`}
       >
         <input
-          type="text"
+          readOnly
           className="bu-input"
-          placeholder="eg.rijalbinaya2@gmail.com"
+          placeholder={props.placeholder}
+          onChange={props.onChange}
+          value={props.value}
         />
       </div>
     );

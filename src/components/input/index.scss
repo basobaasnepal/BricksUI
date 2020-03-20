@@ -1,6 +1,5 @@
 .input-wrapper {
   padding: 10px;
-  width: 50%;
   font-family: "GothamSSm-Light";
   .input-outer-tab {
     padding: 0 10px;
@@ -31,6 +30,7 @@
     }
   }
   .input-outer {
+    min-height: 32px;
     border: 1px solid #d9d9d9;
     padding: 0 10px;
     display: flex;
@@ -46,7 +46,35 @@
       width: auto;
       display: inline-block;
     }
-
+    .multi-icon-wrapper {
+      width: auto;
+      padding: 5px 0;
+      height: auto;
+      display: flex;
+      flex-wrap: wrap;
+      .multiple-input-items {
+        background: #f5f5f5;
+        border: 1px solid #f0f0f0;
+        max-width: 100%;
+        margin-right: 4px;
+        font-size: 13px;
+        display: flex;
+        .md {
+          font-size: 14px;
+          padding-left: 5px;
+          color: rgba(0, 0, 0, 0.45);
+          &:hover {
+            color: #000;
+            cursor: pointer;
+          }
+        }
+        span {
+          margin: 2px 0px;
+          padding-top: 2px;
+          padding-left: 2px;
+        }
+      }
+    }
     .search-icon-wrapper {
       height: 32px;
       width: 46px;
@@ -205,6 +233,7 @@
 }
 .input-small {
   .input-outer {
+    min-height: 26px;
     .bu-input {
       height: 26px;
       font-size: 12px;
@@ -232,6 +261,7 @@
 }
 .input-large {
   .input-outer {
+    min-height: 40px;
     .bu-input {
       height: 40px;
       font-size: 15px;
