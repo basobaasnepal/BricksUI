@@ -98,3 +98,9 @@ export interface SearchProps {
   size?: "small" | "default" | "large";
   onChange?: (event: React.MouseEvent<HTMLElement, MouseEvent>) => void;
 }
+export interface PaginationProps {
+  totalRecords: number;
+  pageLimit: number;
+  pageNeighbours: number;
+  onPageChanged: (data: any) => void;
+}
