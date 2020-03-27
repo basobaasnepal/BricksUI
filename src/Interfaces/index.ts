@@ -98,3 +98,23 @@ export interface SearchProps {
   size?: "small" | "default" | "large";
   onChange?: (event: React.MouseEvent<HTMLElement, MouseEvent>) => void;
 }
+export interface TableColums {
+  title: string;
+  key: string;
+}
+export interface RenderProps {
+  click: (data: any) => void;
+  title: string;
+}
+export interface DataSources {
+  key: string;
+  dataValues: Array<string>;
+  render?: Array<RenderProps>;
+}
+export interface TableProps {
+  columns: Array<TableColums>;
+  dataSource: Array<DataSources>;
+  onClick?: (data: any) => void;
+  headClassName?: string;
+  bodyClassName?: string;
+}
