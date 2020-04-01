@@ -5,6 +5,7 @@ import Tooltip from "./pages/Tooltip";
 import Home from "./pages/Home";
 import Dropdown from "./pages/dropdown";
 import Typography from "./pages/Typography";
+import Toast from "./pages/Toast";
 
 function App() {
   return (
@@ -22,6 +23,9 @@ function App() {
           </Route>
           <Route path="/typography">
             <Typography />
+          </Route>
+          <Route path="/toast">
+            <Toast />
           </Route>
           <Route path="/">
             <Home />

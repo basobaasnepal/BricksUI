@@ -19,6 +19,9 @@ const Sidebar = () => {
       <NavLink to="/dropdown" activeClassName="active" exact>
         <span>Dropdown</span>
       </NavLink>
+      <NavLink to="/toast" activeClassName="active" exact>
+        <span>Toast</span>
+      </NavLink>
     </div>
   );
 };
