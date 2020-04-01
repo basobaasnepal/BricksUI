@@ -1,0 +1,98 @@
+.bu-toast-wrapper {
+  position: fixed;
+  background-color: #fff;
+  box-shadow: 0 3px 6px -4px rgba(0, 0, 0, 0.12),
+    0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+  width: 420px;
+  margin: 15px;
+  z-index: 1010;
+  max-width: calc(100vw - 30px);
+  .bu-toast {
+    padding: 15px;
+    .bu-toast-top-text {
+      display: flex;
+      .bu-toast-left-icon-wrapper {
+        .md {
+          color: #006bff;
+          font-size: 24px;
+        }
+      }
+      .bu-toast-right-wrapper {
+        padding: 0 10px;
+        .bu-toast-header {
+          display: flex;
+          justify-content: space-between;
+          padding-top: 3px;
+          .bu-toast-title {
+            font-size: 17px;
+          }
+          .bu-toast-close-icon {
+            position: absolute;
+            right: 10px;
+            cursor: pointer;
+
+            .md {
+              font-size: 20px;
+              color: rgba(0, 0, 0, 0.45);
+              &:hover {
+                color: #000;
+              }
+            }
+          }
+        }
+        .bu-toast-body {
+          padding: 10px 0;
+          padding-right: 15px;
+          .bu-toast-content {
+            font-size: 14px;
+            color: rgba(0, 0, 0, 0.65);
+            line-height: 18px;
+            font-family: "GothamSSm-light";
+            text-align: left;
+          }
+        }
+      }
+    }
+    .bu-toast-bottom-button {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}
+.bu-toast-default,
+.bu-toast-topLeft {
+  top: 5px;
+  left: 5px;
+  animation: toastLeft 0.25s;
+}
+.bu-toast-topRight {
+  right: 5px;
+  top: 5px;
+  animation: toastRight 0.25s;
+}
+.bu-toast-bottomLeft {
+  left: 5px;
+  bottom: 5px;
+  animation: toastLeft 0.25s;
+}
+.bu-toast-bottomRight {
+  right: 5px;
+  bottom: 5px;
+  animation: toastRight 0.25s;
+}
+@keyframes toastLeft {
+  from {
+    left: -25px;
+  }
+  to {
+    left: 5px;
+  }
+}
+@keyframes toastRight {
+  from {
+    right: -25px;
+  }
+  to {
+    right: 5px;
+  }
+}
