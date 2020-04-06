@@ -105,3 +105,8 @@ export interface ToastProps {
   btn?: React.ReactNode;
   position?: "topLeft" | "topRight" | "bottomLeft" | "bottomRight";
 }
+export interface SkeletonProps {
+  active?: boolean;
+  rows?: number;
+  avatar?: boolean;
+}

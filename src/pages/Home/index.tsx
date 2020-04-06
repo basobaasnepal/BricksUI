@@ -1,29 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import MainLayout from "../../layouts/mainLayout";
-import Toast from "../../components/toast";
-import { IonIcon } from "@ionic/react";
-import { alertCircleOutline } from "ionicons/icons";
-import { Button } from "../../components/buttons";
+import Skeleton from "../../components/skeleton";
 
 const Home = () => {
-  const [display, setDisplay] = useState(false as boolean);
-  const handleClick = () => {
-    setDisplay(true);
-  };
   return (
     <>
       <MainLayout>
-        <Button type="primary" onClick={handleClick}>
-          Click here
-        </Button>
-        {display && (
-          <Toast
-            title="Notification Title"
-            content="I will never close automatically. This is a purposely very very long description that has many many characters and words."
-            icon={<IonIcon icon={alertCircleOutline} />}
-            position="topRight"
-          />
-        )}
+        <Skeleton />
+        <Skeleton rows={2} />
+        <Skeleton rows={2} active />
+        <Skeleton rows={3} avatar />
+        <Skeleton rows={3} avatar active />
       </MainLayout>
     </>
   );
