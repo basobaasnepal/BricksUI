@@ -98,3 +98,15 @@ export interface SearchProps {
   size?: "small" | "default" | "large";
   onChange?: (event: React.MouseEvent<HTMLElement, MouseEvent>) => void;
 }
+export interface ToastProps {
+  title: string;
+  content: string;
+  icon?: React.ReactNode;
+  btn?: React.ReactNode;
+  position?: "topLeft" | "topRight" | "bottomLeft" | "bottomRight";
+}
+export interface SkeletonProps {
+  active?: boolean;
+  rows?: number;
+  avatar?: boolean;
+}
