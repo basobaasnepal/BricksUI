@@ -24,6 +24,12 @@
         }
       }
     }
+    .container {
+      position: relative;
+    }
+    .size {
+      display: flex;
+    }
   }
   .extra-margin {
     padding: 40px 20px;
