@@ -98,3 +98,8 @@ export interface SearchProps {
   size?: "small" | "default" | "large";
   onChange?: (event: React.MouseEvent<HTMLElement, MouseEvent>) => void;
 }
+export interface SpinnerProps {
+  size?: "small" | "default" | "large";
+  text?: boolean;
+  container?: boolean;
+}
