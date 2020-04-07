@@ -98,3 +98,17 @@ export interface SearchProps {
   size?: "small" | "default" | "large";
   onChange?: (event: React.MouseEvent<HTMLElement, MouseEvent>) => void;
 }
+export interface CheckboxOptionsProps {
+  label: string;
+  value: string;
+}
+export interface CheckboxProps {
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  animation?: boolean;
+  disabled?: boolean;
+  defaultChecker?: boolean;
+  options?: Array<CheckboxOptionsProps>;
+  id?: string;
+  name?: string;
+  value?: string;
+}
