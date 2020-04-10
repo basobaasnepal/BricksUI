@@ -98,3 +98,23 @@ export interface SearchProps {
   size?: "small" | "default" | "large";
   onChange?: (event: React.MouseEvent<HTMLElement, MouseEvent>) => void;
 }
+export interface RadioOptionsProps {
+  label: string;
+  value: string;
+}
+export interface RadioProps {
+  id?: string;
+  name?: string;
+  value?: string;
+  animation?: boolean;
+  options?: Array<RadioOptionsProps>;
+  disabled?: boolean;
+  defaultChecker?: boolean;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  vertical?: boolean;
+  labelMargin?: number;
+  button?: boolean;
+  radioItemMargin?: number;
+  label?: string;
+  labelClassName?: string;
+}
