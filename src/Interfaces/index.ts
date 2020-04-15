@@ -98,3 +98,14 @@ export interface SearchProps {
   size?: "small" | "default" | "large";
   onChange?: (event: React.MouseEvent<HTMLElement, MouseEvent>) => void;
 }
+export interface TagProps {
+  closeable?: boolean;
+  children?: string;
+  bgColor?: string;
+  color?: string;
+  input?: boolean;
+  icon?: React.ReactNode;
+  onClose?: () => void;
+  type?: "success" | "processing" | "error" | "default" | "warning";
+  borderColor?: string;
+}

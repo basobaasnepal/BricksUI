@@ -1,51 +1,46 @@
 import React from "react";
 import MainLayout from "../../layouts/mainLayout";
-import Input from "../../components/input";
-import Search from "../../components/search";
-import Textarea from "../../components/textarea";
-import { person, search } from "ionicons/icons";
+import Tag from "../../components/tag";
 import { IonIcon } from "@ionic/react";
+import { logoFacebook, logoTwitter } from "ionicons/icons";
 
 const Home = () => {
+  const onClose = () => {
+    console.log("on Close clicked");
+  };
   return (
     <MainLayout>
-      <div className="title">Home</div>
-      <Input type="password" />
-      <Input
-        prefix={<IonIcon icon={person} />}
-        suffix={<IonIcon icon={search} />}
-      />
-      <Input
-        prefix={<IonIcon icon={person} />}
-        suffix={<IonIcon icon={person} />}
-        preTab="https://"
-      />
-      <Input postTab=".com" preTab="https://" />
-      <Input
-        prefix={<IonIcon icon={person} />}
-        suffix={<IonIcon icon={person} />}
-        preTab="https://"
-        postTab=".com"
-        size="small"
-      />
-      <Input
-        suffix={<IonIcon icon={person} />}
-        preTab="https://"
-        postTab=".com"
-      />
-      <Input suffix={<IonIcon icon={person} />} postTab=".com" />
-      <Input prefix={<IonIcon icon={person} />} preTab="https://" />
-      <Input prefix={<IonIcon icon={person} />} postTab=".com" />
-      <Input size="small" />
-      <Input size="small" />
-      <Input size="large" suffix={<IonIcon icon={person} />} />
-      <Input size="large" />
-      <Search />
-      <Search button="icon" />
-      <Search size="small" button="icon" />
-      <Search size="large" button="icon" />
-      <Search size="large" button="block" />
-      <Textarea />
+      <div className="margin-top">
+        <Tag
+          color="white"
+          icon={<IonIcon icon={logoFacebook} style={{ color: "#fff" }} />}
+          bgColor="#3b5999"
+          closeable
+          onClose={onClose}
+        >
+          facebook
+        </Tag>
+        <Tag
+          closeable
+          color="white"
+          icon={<IonIcon icon={logoTwitter} />}
+          bgColor="#55acee"
+        >
+          twitter
+        </Tag>
+        <Tag closeable color="#f50">
+          #f50
+        </Tag>
+        <Tag closeable color="purple">
+          purple
+        </Tag>
+        <Tag closeable>Hello</Tag>
+        <Tag type="success">Success</Tag>
+        <Tag type="processing">Processing</Tag>
+        <Tag type="error">error</Tag>
+        <Tag type="warning">warning</Tag>
+        <Tag type="default">default</Tag>
+      </div>
     </MainLayout>
   );
 };
