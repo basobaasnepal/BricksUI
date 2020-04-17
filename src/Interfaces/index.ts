@@ -109,3 +109,17 @@ export interface TagProps {
   type?: "success" | "processing" | "error" | "default" | "warning";
   borderColor?: string;
 }
+export interface AvatarProps {
+  shape?: "circle" | "default";
+  size?: "small" | "large" | "default";
+  bgColor?: string;
+  children?: string;
+  icon?: React.ReactNode;
+  src?: string;
+  alt?: string;
+  fontSize?: number;
+  left?: number;
+  top?: number;
+  badge?: number;
+  color?: string;
+}

@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Dropdown from "./pages/dropdown";
 import Typography from "./pages/Typography";
 import Tag from "./pages/Tag";
+import Avatar from "./pages/Avatar";
 
 function App() {
   return (
@@ -26,6 +27,9 @@ function App() {
           </Route>
           <Route path="/tag">
             <Tag />
+          </Route>
+          <Route path="/avatar">
+            <Avatar />
           </Route>
           <Route path="/">
             <Home />

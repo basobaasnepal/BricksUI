@@ -1,45 +1,51 @@
 import React from "react";
 import MainLayout from "../../layouts/mainLayout";
-import Tag from "../../components/tag";
+import Avatar from "../../components/avatar";
 import { IonIcon } from "@ionic/react";
-import { logoFacebook, logoTwitter } from "ionicons/icons";
+import { personOutline } from "ionicons/icons";
 
 const Home = () => {
-  const onClose = () => {
-    console.log("on Close clicked");
-  };
   return (
     <MainLayout>
       <div className="margin-top">
-        <Tag
-          color="white"
-          icon={<IonIcon icon={logoFacebook} style={{ color: "#fff" }} />}
-          bgColor="#3b5999"
-          closeable
-          onClose={onClose}
-        >
-          facebook
-        </Tag>
-        <Tag
-          closeable
-          color="white"
-          icon={<IonIcon icon={logoTwitter} />}
-          bgColor="#55acee"
-        >
-          twitter
-        </Tag>
-        <Tag closeable color="#f50">
-          #f50
-        </Tag>
-        <Tag closeable color="purple">
-          purple
-        </Tag>
-        <Tag closeable>Hello</Tag>
-        <Tag type="success">Success</Tag>
-        <Tag type="processing">Processing</Tag>
-        <Tag type="error">error</Tag>
-        <Tag type="warning">warning</Tag>
-        <Tag type="default">default</Tag>
+        <Avatar
+          size="large"
+          shape="circle"
+          bgColor="#87d068"
+          icon={<IonIcon icon={personOutline} />}
+          badge={100}
+        ></Avatar>
+        <Avatar
+          src="images/user.jpg"
+          alt="user"
+          shape="circle"
+          size="large"
+        ></Avatar>
+        <Avatar
+          size="small"
+          shape="circle"
+          icon={<IonIcon icon={personOutline} />}
+          badge={100}
+        ></Avatar>
+        <Avatar
+          src="images/user.jpg"
+          alt="user"
+          shape="circle"
+          size="small"
+          badge={100}
+        ></Avatar>
+        <Avatar
+          icon={<IonIcon icon={personOutline} />}
+          badge={2}
+          color="black"
+        ></Avatar>
+        <Avatar src="images/user.jpg" alt="user" badge={100}></Avatar>
+        <Avatar shape="circle" badge={100} color="black">
+          BR
+        </Avatar>
+        <Avatar shape="circle" fontSize={11} top={14} left={2}>
+          Binaya
+        </Avatar>
       </div>
     </MainLayout>
   );
