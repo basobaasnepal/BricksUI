@@ -109,3 +109,16 @@ export interface TagProps {
   type?: "success" | "processing" | "error" | "default" | "warning";
   borderColor?: string;
 }
+export interface BreadcrumItemsProps {
+  children?: React.ReactNode;
+  fontSize?: number;
+  icon?: React.ReactNode;
+  seperator?: React.ReactNode;
+  color?: string;
+  href?: string;
+}
+export interface BreadcrumProps {
+  color?: string;
+  bgColor?: string;
+  children?: React.ReactNode;
+}
