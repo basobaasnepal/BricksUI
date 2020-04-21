@@ -98,3 +98,27 @@ export interface SearchProps {
   size?: "small" | "default" | "large";
   onChange?: (event: React.MouseEvent<HTMLElement, MouseEvent>) => void;
 }
+export interface TagProps {
+  closeable?: boolean;
+  children?: string;
+  bgColor?: string;
+  color?: string;
+  input?: boolean;
+  icon?: React.ReactNode;
+  onClose?: () => void;
+  type?: "success" | "processing" | "error" | "default" | "warning";
+  borderColor?: string;
+}
+export interface BreadcrumItemsProps {
+  children?: React.ReactNode;
+  fontSize?: number;
+  icon?: React.ReactNode;
+  seperator?: React.ReactNode;
+  color?: string;
+  href?: string;
+}
+export interface BreadcrumProps {
+  color?: string;
+  bgColor?: string;
+  children?: React.ReactNode;
+}

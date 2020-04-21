@@ -5,6 +5,8 @@ import Tooltip from "./pages/Tooltip";
 import Home from "./pages/Home";
 import Dropdown from "./pages/dropdown";
 import Typography from "./pages/Typography";
+import Tag from "./pages/Tag";
+import Breadcrum from "./pages/Breadcrum";
 
 function App() {
   return (
@@ -22,6 +24,12 @@ function App() {
           </Route>
           <Route path="/typography">
             <Typography />
+          </Route>
+          <Route path="/tag">
+            <Tag />
+          </Route>
+          <Route path="/breadcrum">
+            <Breadcrum />
           </Route>
           <Route path="/">
             <Home />
